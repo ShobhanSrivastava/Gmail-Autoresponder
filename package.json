@@ -1,0 +1,18 @@
+{
+  "name": "gmail-autoresponder",
+  "version": "1.0.0",
+  "description": "This application auto replies on your behalf with a custom message on Gmail while you are on vacation.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "autoreply": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/local-auth": "2.1.0",
+    "googleapis": "^105.0.0",
+    "winston": "^3.11.0"
+  }
+}
