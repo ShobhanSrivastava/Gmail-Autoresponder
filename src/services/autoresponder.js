@@ -62,7 +62,7 @@ async function startService() {
             await delay(getRandomDelayBetweenIntervals() * 1000);
         }
     } catch(err) {
-        console.log(err);
+        logger.error(err);
     }
 }
 

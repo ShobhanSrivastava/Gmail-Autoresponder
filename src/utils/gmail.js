@@ -30,7 +30,7 @@ async function createLabelIfNotExists(gmail, labelName) {
     let label = await findLabel(gmail, labelName);
 
     if(!label) {
-        logger.info("No label with given labelName found");
+        logger.info(`Label "${labelName}" not found`);
         
         const res = await gmail.users.labels.create({
             userId: 'me',
@@ -42,9 +42,9 @@ async function createLabelIfNotExists(gmail, labelName) {
         });
         
         label = res.data;
-        logger.info("Created a label with given labelName");
+        logger.info(`Created label "${labelName}"`);
     } else {
-        logger.info('Label already present');
+        logger.info(`Label "${labelName}" already present`);
     }
 
     return label;

@@ -18,7 +18,6 @@ async function loadSavedCredentialsIfExist() {
         const credentials = JSON.parse(content);
         return google.auth.fromJSON(credentials);
     } catch (err) {
-        console.log(err);
         return null;
     }
 }
@@ -34,8 +33,6 @@ async function saveCredentials(client) {
       client_secret: key.client_secret,
       refresh_token: client.credentials.refresh_token,
     });
-    
-    console.log(payload);
 
     await fs.writeFile(TOKEN_PATH, payload);
 }
