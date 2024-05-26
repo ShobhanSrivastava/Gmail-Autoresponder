@@ -4,7 +4,7 @@
   "description": "This application auto replies on your behalf with a custom message on Gmail while you are on vacation.",
   "main": "index.js",
   "scripts": {
-    "autoreply": "node dist/index.js",
+    "autoreply": "tsc && node dist/index.js",
     "dev": "nodemon dist/index.js"
   },
   "keywords": [],
